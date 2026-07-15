@@ -1,0 +1,102 @@
+{
+  "task1_triage_eval": [
+    {
+      "ticket_id": "TKT-10000",
+      "description": "Normal case - feature request mislabeled as Billing in source data",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "llm_judge_score": 0.9,
+      "llm_judge_justification": "The classification is reasonable given the ticket content, as it accurately identifies the feature request, urgency, and provides a professional draft response, but may benefit from a slightly more detailed justification for the P1 urgency level.",
+      "output": {
+        "product_area": "Data Ingestion",
+        "category": "Feature Request",
+        "urgency": "P1",
+        "reasoning": "The customer is experiencing scalability issues with manual one-by-one archive operations and is requesting bulk archive operations to support their growing user base. The request is classified as a high-urgency feature request due to the significant impact on the customer's workflow efficiency.",
+        "recommended_team": "Product Team",
+        "draft_response": "Thank you for reaching out to us about the need for bulk archive operations in DataBridge Pro's Data Ingestion module. We understand the importance of this feature for your growing team and appreciate you bringing this to our attention. Our product team will review this request and consider it for future development. We will be in touch soon to discuss potential next steps.",
+        "kb_doc_referenced": "false"
+      }
+    },
+    {
+      "ticket_id": "TKT-10003",
+      "description": "Tricky case - CHECKSUM_MISMATCH error requiring KB knowledge",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "llm_judge_score": 0.9,
+      "llm_judge_justification": "The classification is reasonable given the ticket content, as it accurately identifies the product area, category, and urgency, and provides a professional draft response, although the kb_doc_referenced field seems unjustified as no specific knowledge base document is mentioned.",
+      "output": {
+        "product_area": "SecureVault Authentication",
+        "category": "Bug",
+        "urgency": "P1",
+        "reasoning": "The error is preventing all users from accessing the Authentication module, indicating a critical issue that needs immediate attention. The customer has provided clear steps to reproduce, suggesting a reproducible bug.",
+        "recommended_team": "Tier-2 Engineering",
+        "draft_response": "Thank you for reaching out to us about the issue you're experiencing with the Authentication module in SecureVault. Sorry to hear that you're encountering a CHECKSUM_MISMATCH error. Our engineering team will investigate this further, and we will be in touch soon with an update or a request for additional information. Please let us know if there's anything else we can do to assist in the meantime.",
+        "kb_doc_referenced": "true"
+      }
+    },
+    {
+      "ticket_id": "TKT-10475",
+      "description": "ADVERSARIAL - vague onboarding question, minimal detail",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "llm_judge_score": 0.9,
+      "llm_judge_justification": "The classification is reasonable given the ticket content, as it accurately identifies the customer's need for guidance on integrations setup and provides a suitable draft response.",
+      "output": {
+        "product_area": "CloudSync Integrations",
+        "category": "How-To",
+        "urgency": "P2",
+        "reasoning": "The customer is seeking best practices for setting up integrations with CloudSync, which indicates a need for guidance rather than a critical issue. The customer's setup with 475 users and integration with Jira suggests a moderate level of complexity.",
+        "recommended_team": "Onboarding Team",
+        "draft_response": "Hello, thank you for reaching out to us about setting up integrations with CloudSync. We'd be happy to provide you with best practices tailored to your specific setup, including your integration with Jira. Our onboarding team will be in touch shortly to discuss further. In the meantime, please let us know if you have any specific concerns or questions about the integration process.",
+        "kb_doc_referenced": "true"
+      }
+    }
+  ],
+  "task2_account_eval": [
+    {
+      "account_id": "ACC-3336",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "output": {
+        "executive_summary": "Omni Consumer Products, a Business tier customer since 2025-07-28, is currently marked as 'At Risk' with an ARR of $500,000 and 1693 active seats out of 1845 licensed. The account has an inactive usage trend and 7 open tickets, including a recent P2 ticket regarding DataBridge Pro performance issues. Despite the 'At Risk' status, there are no P1 tickets in the last 30 days, contradicting an escalation note mentioning '3 consecutive P1 tickets in the last 30 days', suggesting a need for clarification. The customer's last login was 5 days ago, and they have an active integration with HubSpot. The renewal date is approaching on 2026-08-19.",
+        "risks_and_flags": [
+          {
+            "risk": "Churn Risk due to Performance Issues",
+            "evidence_quote": "DataBridge Pro running extremely slowly for our team"
+          },
+          {
+            "risk": "Competitor Evaluation",
+            "evidence_quote": "Decision maker considering competing vendor evaluation"
+          }
+        ],
+        "recommended_talking_points": [
+          "Addressing the recent performance issues with DataBridge Pro to prevent further dissatisfaction",
+          "Discussing the value of our products, specifically WorkflowEngine and AnalyticsHub, to counter competitor evaluation",
+          "Reviewing the integration with HubSpot to ensure it's meeting the customer's needs and exploring potential for additional integrations"
+        ]
+      }
+    },
+    {
+      "account_id": "ACC-3033",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "output": {
+        "executive_summary": "Polaris Group, a Healthy account in the Energy industry, has been a customer since 2024-07-08 with an ARR of $120,000. They are currently on the Starter plan with 1049 licensed seats and 925 active seats. Their usage trend is Increasing, and they have 11 open tickets, but no P1 tickets in the last 30 days.",
+        "risks_and_flags": [],
+        "recommended_talking_points": [
+          "Review of current DataBridge Pro usage and potential upsell opportunities",
+          "Discussion on increasing adoption of licensed seats to reach 100% utilization",
+          "Exploring additional integration opportunities beyond Google Workspace and Jira"
+        ]
+      }
+    },
+    {
+      "account_id": "ACC-9999",
+      "rule_based_passed": true,
+      "note": "Correctly handled missing account",
+      "output": {
+        "error": "No account found with ID ACC-9999"
+      }
+    }
+  ]
+}
