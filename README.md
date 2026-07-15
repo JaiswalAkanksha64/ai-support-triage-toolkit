@@ -12,7 +12,7 @@ An AI-powered toolkit for support ticket triage and customer account health summ
 
 1. Clone this repo and navigate into it:
 
-git clone <repo-url>
+git clone https://github.com/JaiswalAkanksha64/ai-support-triage-toolkit.git
 cd ai-support-triage-toolkit
 
 2. Create and activate a virtual environment:
