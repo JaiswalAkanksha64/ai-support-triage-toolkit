@@ -35,6 +35,40 @@
       }
     },
     {
+      "ticket_id": "TKT-10043",
+      "description": "Tricky case - performance issue mislabeled as Billing in source data",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "llm_judge_score": 0.9,
+      "llm_judge_justification": "The AI's classification is reasonable given the ticket content, accurately identifying the product area, category, and urgency, with a professional draft response, but could be improved with more specific details in the reasoning and draft response.",
+      "output": {
+        "product_area": "AnalyticsHub",
+        "category": "Performance",
+        "urgency": "P1",
+        "reasoning": "The customer's Alerts dashboard in AnalyticsHub is experiencing unacceptable loading times of over 113 seconds, which is impacting their ability to prepare for a board presentation, thus requiring immediate attention. The issue seems to be related to performance rather than a bug or feature request.",
+        "recommended_team": "Tier-2 Engineering",
+        "draft_response": "Dear ACC-7937, thank you for reaching out to us about the issue with your AnalyticsHub Alerts dashboard loading times. We understand the urgency of this matter, especially with your upcoming board presentation. Our team will investigate this performance issue promptly. We may need additional information from you to resolve this efficiently, and we will be in touch soon.",
+        "kb_doc_referenced": "true"
+      }
+    },
+    {
+      "ticket_id": "TKT-10289",
+      "description": "Normal case - performance issue mislabeled as Onboarding in source data",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "llm_judge_score": 0.9,
+      "llm_judge_justification": "The classification is reasonable given the ticket content, as it accurately identifies the product area, category, and urgency, and provides a professional draft response that acknowledges the customer's concern and prioritizes a swift resolution.",
+      "output": {
+        "product_area": "CloudSync",
+        "category": "Performance",
+        "urgency": "P1",
+        "reasoning": "The customer is experiencing unacceptable dashboard loading times in CloudSync, which is a critical issue given their upcoming board presentation, thus requiring immediate attention. The high priority and time-sensitive nature of this issue justify the P1 classification.",
+        "recommended_team": "Tier-2 Engineering",
+        "draft_response": "Dear ACC-2109, thank you for reaching out to us about the performance issue with your File Sync dashboard in CloudSync. We apologize for the inconvenience this has caused, especially with your board presentation approaching. Our team will investigate this matter urgently to identify the cause and work towards a swift resolution. We will be in touch soon to request additional information or provide an update on our progress.",
+        "kb_doc_referenced": "false"
+      }
+    },
+    {
       "ticket_id": "TKT-10475",
       "description": "ADVERSARIAL - vague onboarding question, minimal detail",
       "rule_based_passed": true,
@@ -87,6 +121,47 @@
           "Review of current DataBridge Pro usage and potential upsell opportunities",
           "Discussion on increasing adoption of licensed seats to reach 100% utilization",
           "Exploring additional integration opportunities beyond Google Workspace and Jira"
+        ]
+      }
+    },
+    {
+      "account_id": "ACC-7893",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "output": {
+        "executive_summary": "Solaris Data, an Enterprise tier customer since 2025-12-24, has shown an increasing usage trend with 757 active seats out of 1314 licensed seats. Their ARR is $24,000, and they have a high NPS score of 10. The primary contact, Quinn Wilson, IT Manager, last logged in 24 days ago. The account is marked as 'New' in terms of health status, with no recent tickets on record, but there are 5 open tickets.",
+        "risks_and_flags": [],
+        "recommended_talking_points": [
+          "Review the current product usage and identify opportunities for optimization",
+          "Discuss the integration with HubSpot and potential for further integrations",
+          "Explore ways to increase engagement and reduce the number of open tickets"
+        ]
+      }
+    },
+    {
+      "account_id": "ACC-8113",
+      "rule_based_passed": true,
+      "rule_based_issues": [],
+      "output": {
+        "executive_summary": "Vertex Solutions, a Professional tier customer since 2025, is currently at risk with a declining usage trend and negative sentiment detected in recent support interactions. The account has an ARR of $500,000 and 29 active seats out of 40 licensed. Despite the lack of recent tickets on record, escalation notes indicate concerns from the procurement team, negative sentiment, and consideration of competing vendors.",
+        "risks_and_flags": [
+          {
+            "risk": "Churn Risk due to Pricing Concerns",
+            "evidence_quote": "Procurement team requested pricing review"
+          },
+          {
+            "risk": "Churn Risk due to Negative Sentiment",
+            "evidence_quote": "Negative sentiment detected in recent support tickets"
+          },
+          {
+            "risk": "Competing Vendor Evaluation",
+            "evidence_quote": "Decision maker considering competing vendor evaluation"
+          }
+        ],
+        "recommended_talking_points": [
+          "Addressing pricing concerns and potential adjustments to meet the customer's needs",
+          "Improving customer satisfaction through enhanced support and product usage guidance",
+          "Highlighting the value proposition of our products over competing vendors to prevent evaluation"
         ]
       }
     },

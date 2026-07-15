@@ -88,8 +88,11 @@ def run_triage_eval(cache):
     test_indices = {
         0: "Normal case - feature request mislabeled as Billing in source data",
         3: "Tricky case - CHECKSUM_MISMATCH error requiring KB knowledge",
+        43: "Tricky case - performance issue mislabeled as Billing in source data",
+        289: "Normal case - performance issue mislabeled as Onboarding in source data",
         475: "ADVERSARIAL - vague onboarding question, minimal detail",
     }
+
 
     results = []
     for idx, description in test_indices.items():
@@ -132,9 +135,11 @@ def run_account_eval(cache):
     test_account_ids = [
         accounts[0]["account_id"],
         accounts[1]["account_id"],
+        accounts[2]["account_id"],
+        accounts[5]["account_id"],
         "ACC-9999",
     ]
-
+    
     results = []
     for acc_id in test_account_ids:
         cache_key = f"account_{acc_id}"
