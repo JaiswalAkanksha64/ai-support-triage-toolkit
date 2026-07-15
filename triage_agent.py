@@ -47,10 +47,10 @@ def find_relevant_doc(ticket, knowledge_base):
 
 def triage_ticket(ticket, knowledge_base, max_retries=2):
     """
-    Sends one ticket to Gemini and asks it to classify it,
+    Sends one ticket to the AI model and asks it to classify it,
     recommend a team, and draft a first response.
-    Retries automatically if Gemini returns malformed JSON.
-    Returns a Python dictionary (parsed from Gemini's JSON response).
+    Retries automatically if the AI returns malformed JSON.
+    Returns a Python dictionary (parsed from the AI's JSON response).
     """
     relevant_doc = find_relevant_doc(ticket, knowledge_base)
     doc_context = relevant_doc if relevant_doc else "No matching knowledge base doc found."
@@ -120,5 +120,5 @@ if __name__ == "__main__":
 
     result = triage_ticket(first_ticket, knowledge_base)
 
-    print("Gemini's triage result:\n")
+    print("Triage agent result:\n")
     print(json.dumps(result, indent=2))
