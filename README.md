@@ -12,22 +12,27 @@ An AI-powered toolkit for support ticket triage and customer account health summ
 
 1. Clone this repo and navigate into it:
 
-git clone https://github.com/JaiswalAkanksha64/ai-support-triage-toolkit.git
-cd ai-support-triage-toolkit
+```
+   git clone https://github.com/JaiswalAkanksha64/ai-support-triage-toolkit.git
+   cd ai-support-triage-toolkit
+```
 
 2. Create and activate a virtual environment:
 
+```
 python -m venv venv
 venv\Scripts\activate      # Windows
 source venv/bin/activate   # Mac/Linux
 
+```
+
 3. Install dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 4. Copy `.env.example` to `.env` and add your Groq API key (free at console.groq.com):
 
-GROQ_API_KEY=your_key_here
+```GROQ_API_KEY=your_key_here```
 
 ## Usage
 
@@ -55,6 +60,3 @@ See [DESIGN_NOTE.md](./DESIGN_NOTE.md) for failure modes, latency/quality trade-
 - Groq API (Llama 3.3 70B) for LLM inference
 - python-dotenv for secrets management
 
-Step 4: Create .env.example (shows what env vars are needed, without real values — required by the task rules)
-
-GROQ_API_KEY=your_groq_api_key_here
